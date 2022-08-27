@@ -11,3 +11,11 @@ class Polygon(models.Model):
 
     class Meta:
         abstract = True
+
+
+class Triangle(Polygon):
+    pass
+
+
+class Square(Polygon):
+    pass
