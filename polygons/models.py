@@ -1,9 +1,7 @@
-import math
 from django.db import models
 
+from .utils import distance2D
 
-def distance2D(xA,yA,xB,yB):
-    return math.sqrt((xA-xB)*(xA-xB)+(yA-yB)*(yA-yB))
 
 
 class Point(models.Model):
@@ -21,7 +19,6 @@ class Polygon(models.Model):
 
 
 class Triangle(Polygon):
-    pass
 
     def get_area(self):
         param_1, param_2, param_3 = self.vertices.all()
@@ -39,7 +36,6 @@ class Triangle(Polygon):
 
 
 class Square(Polygon):
-    pass
 
     def get_area(self):
         param_1, param_2, param_3, param_4 = self.vertices.all()
